@@ -191,11 +191,11 @@ h3 {
 
 @media screen and (max-width: 70em) {
   .login h2 {
-    padding-top: 4rem;
+    padding-top: 9rem;
   }
 
   form {
-    padding-bottom: 4rem;
+    padding-bottom: 9rem;
   }
   .img {
     display: none;
