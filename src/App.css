@@ -81,7 +81,7 @@ button {
 }
 
 .form-cont {
-  width: 97vw;
+  width: 65vh;
   height: 80vh;
   margin-bottom: 9.1%;
   text-align: center;
@@ -200,5 +200,9 @@ h3 {
 
   .nav .cont div:nth-last-child(1) {
     display: none;
+  }
+
+  .form-cont {
+    width: 97vw;
   }
 }
