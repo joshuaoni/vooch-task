@@ -81,7 +81,7 @@ button {
 }
 
 .form-cont {
-  width: 65vh;
+  width: 97vw;
   height: 80vh;
   margin-bottom: 9.1%;
   text-align: center;
@@ -190,13 +190,6 @@ h3 {
 
 
 @media screen and (max-width: 70em) {
-  .login h2 {
-    padding-top: 9rem;
-  }
-
-  form {
-    padding-bottom: 9rem;
-  }
   .img {
     display: none;
   }
