@@ -1,15 +1,17 @@
 import React, {useState} from 'react';
 import login from '../assets/login.PNG';
 
-import {  Checkbox, Input } from 'antd';
+import { Button, Checkbox, Input } from 'antd';
 
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [popup, setPopup] = useState('');
+    const [loading, setLoading] = useState(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true);
         const data = {email, password};
 
         const resp = await fetch('https://reqres.in/api/login', {
@@ -20,11 +22,13 @@ const Login = () => {
         let response = await resp.json();
 
         if (response.token && response.token === 'QpwL5tke4Pnpja7X4') {
+            setLoading(false);
             setPopup('Success!');
             setEmail('');
             setPassword('');
             document.getElementById('popup').style.color = "#023047";
         } else if (response.error) {
+            setLoading(false);
             setPopup(response.error);
             document.getElementById('popup').style.color = "red";
         }
@@ -63,7 +67,7 @@ const Login = () => {
                     <div id='popup'>
                         <h3>{popup}</h3>
                     </div>
-                    <button>Login</button>
+                    {loading ? <Button id='dim' type="primary" loading block>Loading</Button> : <button>Login</button>}
                     <div className='check'>
                         <div>
                             <Checkbox>Remember Password</Checkbox>

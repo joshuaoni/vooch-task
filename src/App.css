@@ -104,6 +104,10 @@ button {
   color: rgba(0,0,0,0.3);
 }
 
+#dim {
+  background-color: #02304799;
+}
+
 .form-cont button {
   width: 100%;
   padding: 0.8rem;
@@ -186,6 +190,10 @@ h3 {
   margin: 0.5rem 0;
   font-weight: 700;
   font-size: 100%;
+}
+
+.ant-btn-loading-icon {
+  padding-right: 0.5rem;
 }
 
 
